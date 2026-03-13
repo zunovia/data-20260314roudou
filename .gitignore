@@ -8,3 +8,16 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Claude Code config
+.claude/
+
+# Raw data files
+data01/
+data02/
+data03/
+
+# Temporary scripts
+tmp/
+tmp01/
+tmp02/

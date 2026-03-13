@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>孤独・孤立実態調査 分析レポート｜令和6年度</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- =====================================================
+     Navigation
+     ===================================================== -->
+<nav class="nav-top">
+  <span class="nav-brand">孤独・孤立実態調査 2024</span>
+  <div class="nav-links">
+    <a href="#overview">調査概要</a>
+    <a href="#loneliness">孤独感の実態</a>
+    <a href="#communication">社会的交流</a>
+    <a href="#participation">社会参加</a>
+    <a href="#support">行政支援</a>
+    <a href="#satisfaction">生活満足度</a>
+    <a href="#analysis">総合考察</a>
+    <a href="#references">参考資料</a>
+  </div>
+</nav>
+
+<!-- =====================================================
+     Hero
+     ===================================================== -->
+<header class="hero">
+  <div class="hero-tag">内閣官房 孤独孤立対策担当室 ／ 令和6年度（2024年度）全国調査</div>
+  <h1>孤独・孤立対策に関する実態調査<br>分析レポート</h1>
+  <p class="hero-sub">全国 10,871 人の調査データから見える日本の孤独・孤立の実態</p>
+  <p class="hero-meta">分析対象: 令和6年度（2024年度）集計データ ／ 分析日: 2026年3月13日</p>
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-num">6.5<span style="font-size:20px">%</span></div>
+      <div class="kpi-label">UCLA高スコア<br>（常に孤独感あり）</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num">45.7<span style="font-size:20px">%</span></div>
+      <div class="kpi-label">何らかの孤独感<br>（UCLA中〜高スコア）</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num">7.4<span style="font-size:20px">%</span></div>
+      <div class="kpi-label">行政等の支援<br>受給率</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num">10,871</div>
+      <div class="kpi-label">有効回答数<br>（孤独感調査）</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- =====================================================
+     Section 1: 調査概要
+     ===================================================== -->
+<section class="report-section" id="overview">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2 class="section-title">調査概要と測定方法</h2>
+    </div>
+
+    <div class="callout">
+      <div class="callout-icon">📋</div>
+      <div class="callout-text">
+        <h4>政策的背景</h4>
+        <p>日本政府は2021年に「孤独・孤立対策担当大臣」を設置（英国に次ぎ世界第2番目）。2023年制定・2024年4月施行の「<a href="https://www.cas.go.jp/jp/seisaku/suisinhou/suisinhou.html" target="_blank">孤独・孤立対策推進法</a>」に基づき、143施策を盛り込んだ重点計画が策定されている。令和6年度実態調査は政策効果の把握と今後の対策立案を目的に実施された。</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 class="sub-title">測定方法</h3>
+        <table class="data-table">
+          <thead>
+            <tr><th>測定法</th><th>内容</th><th>尺度</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>UCLA孤独感尺度</strong></td>
+              <td>「仲間はずれに感じる」「孤立していると感じる」「人と切り離されていると感じる」の3問合計</td>
+              <td>3〜12点</td>
+            </tr>
+            <tr>
+              <td><strong>直接質問</strong></td>
+              <td>「孤独を感じることがあるか」を直接問う</td>
+              <td>5段階</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="data-table" style="margin-top:18px;">
+          <thead>
+            <tr><th>調査概要</th><th>内容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>調査主体</td><td>内閣官房 孤独孤立対策担当室</td></tr>
+            <tr><td>調査対象</td><td>全国の一般市民（16歳以上）</td></tr>
+            <tr><td>有効回答数</td><td>10,871人（孤独感）/ 8,084人（各種支援）</td></tr>
+            <tr><td>調査年度</td><td>令和6年度（2024年度）</td></tr>
+          </tbody>
+        </table>
+        <div class="insight-box" style="margin-top:16px;">
+          <p>UCLA孤独感尺度は米国カリフォルニア大学ロサンゼルス校が開発（Russell, 1996）した国際標準の測定ツール。日本語版3項目版はCronbach's α = 0.89以上と高い内的一貫性が確認されており、内閣府の全国調査でも採用されている。<sup><a href="#ref-ucla">注2</a></sup></p>
+        </div>
+      </div>
+      <div>
+        <h3 class="sub-title">UCLA孤独感スコア分布（全体）</h3>
+        <div class="chart-container">
+          <div class="chart-title">令和6年度 UCLA孤独感スコア 全体分布</div>
+          <div class="chart-wrap" style="height:230px;">
+            <canvas id="distChart"></canvas>
+          </div>
+        </div>
+        <div class="stat-row" style="margin-top:4px;">
+          <div class="stat-mini">
+            <div class="stat-mini-num" style="color:#ef5350;">6.5%</div>
+            <div class="stat-mini-label">高スコア<br>（10-12点）</div>
+          </div>
+          <div class="stat-mini">
+            <div class="stat-mini-num" style="color:#ffa726;">39.2%</div>
+            <div class="stat-mini-label">中スコア<br>（7-9点）</div>
+          </div>
+          <div class="stat-mini">
+            <div class="stat-mini-num" style="color:#66bb6a;">38.0%</div>
+            <div class="stat-mini-label">低スコア<br>（4-6点）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     Section 2: 孤独感の実態
+     ===================================================== -->
+<section class="report-section" id="loneliness">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2 class="section-title">孤独感の実態</h2>
+    </div>
+
+    <!-- 2.1 都市規模別 -->
+    <div class="sub-section">
+      <h3 class="sub-title">2.1 全体の孤独感分布（都市規模別）</h3>
+      <div class="fig-card">
+        <img src="../images/fig01.png" alt="UCLA孤独感尺度 都市規模別分布" class="fig-img">
+        <div class="fig-caption">
+          <strong>図1:</strong> UCLA孤独感尺度 都市規模別分布 ｜
+          📊 出典: 孤独・孤立対策に関する実態調査 令和6年度 第1-1表
+        </div>
+      </div>
+      <div class="insight-box">
+        <p>都市規模による差は±1.6pt 程度と小さく（高スコア率5.8〜7.4%）、孤独感は特定の地域に偏らない<strong>全国的な課題</strong>であることが確認された。政令市・特別区でやや高め（7.4%）が観測されており、都市部の匿名性・繋がりの希薄化が一因として考えられる。</p>
+      </div>
+    </div>
+
+    <!-- 2.2 年齢別 -->
+    <div class="sub-section">
+      <h3 class="sub-title">2.2 年齢別の孤独感</h3>
+      <div class="two-col">
+        <div>
+          <div class="fig-card">
+            <img src="../images/fig02.png" alt="年齢別孤独感" class="fig-img">
+            <div class="fig-caption">
+              <strong>図2:</strong> 年齢別孤独感（UCLA + 直接質問） ｜ 📊 出典: 第1-2表
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="chart-container">
+            <div class="chart-title">年齢別 UCLA高スコア率（インタラクティブ）</div>
+            <div class="chart-wrap" style="height:250px;">
+              <canvas id="ageChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>年齢層</th>
+            <th>UCLA高スコア（10-12点）</th>
+            <th>直接質問「しばしばある」</th>
+            <th>評価</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>16-19歳</td><td>4.2%</td><td>3.3%</td><td><span class="badge badge-green">低</span></td></tr>
+          <tr><td>20代</td><td class="highlight">9.1%</td><td class="highlight">7.4%</td><td><span class="badge badge-red">高</span></td></tr>
+          <tr><td>30代</td><td class="highlight">9.5%</td><td class="highlight">6.0%</td><td><span class="badge badge-red">最高</span></td></tr>
+          <tr><td>40代</td><td>7.2%</td><td>4.3%</td><td><span class="badge badge-blue">中</span></td></tr>
+          <tr><td>50代</td><td>7.6%</td><td>5.1%</td><td><span class="badge badge-blue">中</span></td></tr>
+          <tr><td>60代</td><td>6.7%</td><td>4.4%</td><td><span class="badge badge-blue">中</span></td></tr>
+          <tr><td>70代</td><td class="low">3.9%</td><td class="low">2.5%</td><td><span class="badge badge-green">最低</span></td></tr>
+          <tr style="background:#f0f4ff;font-weight:600;">
+            <td>全体</td><td>6.5%</td><td>4.3%</td><td>—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="insight-box red">
+        <p><strong>最重要発見：20〜30代の孤独感が全年齢で最高水準。</strong> UCLA高スコアは20代9.1%、30代9.5%と全体平均（6.5%）の約1.5倍。就職・転居・人間関係の断絶等のライフイベントが集中する時期と重なる。野村総合研究所の2024年調査でも、20代社員の31.9%が「深刻な孤独感」を抱えていることが報告されている。<sup><a href="#ref-nri">注3</a></sup></p>
+      </div>
+    </div>
+
+    <!-- 2.3 世帯構成別 -->
+    <div class="sub-section">
+      <h3 class="sub-title">2.3 世帯構成別の孤独感</h3>
+      <div class="fig-card">
+        <img src="../images/fig03.png" alt="世帯構成別孤独感" class="fig-img">
+        <div class="fig-caption">
+          <strong>図3:</strong> 世帯構成別孤独感 ｜ 📊 出典: 第1-5表
+        </div>
+      </div>
+      <div class="insight-box">
+        <p><strong>ひとり世帯の孤独感が最も深刻（UCLA高スコア9.9%）。</strong> 夫婦のみ世帯（5.0%）が最低であり、安定したパートナーシップが孤独感の保護因子として機能していることが示唆される。</p>
+      </div>
+    </div>
+
+    <!-- 2.4 就業状況別 -->
+    <div class="sub-section">
+      <h3 class="sub-title">2.4 就業状況別の孤独感</h3>
+      <div class="fig-card">
+        <img src="../images/fig04.png" alt="就業状況別孤独感" class="fig-img">
+        <div class="fig-caption">
+          <strong>図4:</strong> 就業状況別孤独感 ｜ 📊 出典: 第1-7表
+        </div>
+      </div>
+      <div class="insight-box orange">
+        <p><strong>求職中（仕事を探している）の18.6%は全カテゴリで突出して高く、全体平均の約2.9倍。</strong> 就業不安定・経済的不安が孤独感の強力な促進要因。一方、会社役員（0.9%）は最低であり、社会的地位と経済的安定が孤独感の緩衝として機能している可能性がある。</p>
+      </div>
+    </div>
+
+    <!-- 2.5 社会参加×孤独感クロス -->
+    <div class="sub-section">
+      <h3 class="sub-title">2.5 社会参加有無別の孤独感（クロス分析）</h3>
+      <div class="fig-card">
+        <img src="../images/fig05.png" alt="社会参加有無別孤独感" class="fig-img">
+        <div class="fig-caption">
+          <strong>図5:</strong> 社会参加有無別孤独感 ｜ 📊 出典: 第1-17表
+        </div>
+      </div>
+      <div class="insight-box green">
+        <p>社会活動に参加している群のUCLA高スコアは<strong>3.4%</strong>に対し、参加していない群は<strong>9.5%</strong>（差：+6.1pt）。孤独感と社会参加の間に強い関連がある。ただし、因果の方向性（孤独だから参加しないのか、参加しないから孤独になるのか）は横断データのみからは確定できない。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     Section 3: 社会的交流
+     ===================================================== -->
+<section class="report-section" id="communication">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2 class="section-title">社会的交流の実態</h2>
+    </div>
+
+    <!-- 3.1 -->
+    <div class="sub-section">
+      <h3 class="sub-title">3.1 コミュニケーション手段別の頻度分布</h3>
+      <div class="fig-card">
+        <img src="../images/fig06.png" alt="コミュニケーション頻度 全体" class="fig-img">
+        <div class="fig-caption">
+          <strong>図6:</strong> コミュニケーション頻度（全体） ｜ 📊 出典: 第2-1表
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-mini">
+          <div class="stat-mini-num" style="color:#1565c0;">20.9%</div>
+          <div class="stat-mini-label">SNS/メール<br>週4-5回以上（最多）</div>
+        </div>
+        <div class="stat-mini">
+          <div class="stat-mini-num" style="color:#e53935;">9.3%</div>
+          <div class="stat-mini-label">直接会う<br>「全くない」</div>
+        </div>
+      </div>
+      <div class="insight-box">
+        <p><strong>③SNS・電子メールが最も高頻度</strong>（週4-5回以上20.9%）で現代のコミュニケーションの主役となっている。直接会っての交流で「全くない」が<strong>9.3%</strong>と最も高く、対面交流の機会が失われた層の存在を示している。</p>
+      </div>
+    </div>
+
+    <!-- 3.2 -->
+    <div class="sub-section">
+      <h3 class="sub-title">3.2 年齢別コミュニケーション「全くない」率</h3>
+      <div class="fig-card">
+        <img src="../images/fig07.png" alt="年齢別コミュニケーション全くない率" class="fig-img">
+        <div class="fig-caption">
+          <strong>図7:</strong> 年齢別コミュニケーション「全くない」率 ｜ 📊 出典: 第2-2表
+        </div>
+      </div>
+      <div class="insight-box orange">
+        <p><strong>70代では直接会っての「全くない」率が16.5%</strong>（16-19歳の4.6%の3.6倍）と大幅に上昇。70代のSNS「全くない」率も高く、デジタルデバイドが高齢者のコミュニケーション手段を限定している。中年層（40-50代）では電話での「全くない」率が比較的高い傾向があり、仕事中心の生活スタイルや家族・友人との電話コミュニケーションの減少を反映していると考えられる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     Section 4: 社会参加
+     ===================================================== -->
+<section class="report-section" id="participation">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2 class="section-title">社会参加の実態</h2>
+    </div>
+
+    <!-- 4.1 -->
+    <div class="sub-section">
+      <h3 class="sub-title">4.1 社会活動への参加状況</h3>
+      <div class="fig-card">
+        <img src="../images/fig08.png" alt="社会参加活動種別 全体" class="fig-img">
+        <div class="fig-caption">
+          <strong>図8:</strong> 社会参加活動種別（全体） ｜ 📊 出典: 第3-1表
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-mini">
+          <div class="stat-mini-num">46.6%</div>
+          <div class="stat-mini-label">何らかの活動に<br>参加している</div>
+        </div>
+        <div class="stat-mini">
+          <div class="stat-mini-num" style="color:#e53935;">50.6%</div>
+          <div class="stat-mini-label">特に参加なし<br>（過半数）</div>
+        </div>
+        <div class="stat-mini">
+          <div class="stat-mini-num" style="color:#1565c0;">32.0%</div>
+          <div class="stat-mini-label">スポーツ・趣味・娯楽<br>（最多活動）</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4.2 -->
+    <div class="sub-section">
+      <h3 class="sub-title">4.2 年齢別社会参加率の推移</h3>
+      <div class="fig-card">
+        <img src="../images/fig09.png" alt="年齢別社会参加率" class="fig-img">
+        <div class="fig-caption">
+          <strong>図9:</strong> 年齢別社会参加率 ｜ 📊 出典: 第3-2表
+        </div>
+      </div>
+      <div class="insight-box">
+        <p>20代の「特に参加なし」率が<strong>63.2%</strong>と高く、若年層の社会参加率の低さが孤独感の高さと対応している。40代以降では参加率が回復し、70代では53.1%と高水準となる。</p>
+      </div>
+    </div>
+
+    <!-- 4.3 孤独感×社会参加クロス -->
+    <div class="sub-section">
+      <h3 class="sub-title">4.3 孤独感レベル別の社会参加率</h3>
+      <div class="two-col">
+        <div>
+          <div class="fig-card">
+            <img src="../images/fig10.png" alt="孤独感×社会参加率クロス分析" class="fig-img">
+            <div class="fig-caption">
+              <strong>図10:</strong> 孤独感×社会参加率 クロス分析 ｜ 📊 出典: 第3-17表
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="chart-container">
+            <div class="chart-title">UCLA孤独感スコア別 社会参加率（インタラクティブ）</div>
+            <div class="chart-wrap" style="height:220px;">
+              <canvas id="participChart"></canvas>
+            </div>
+          </div>
+          <table class="data-table" style="margin-top:14px;">
+            <thead>
+              <tr><th>UCLA孤独感スコア</th><th>社会参加率</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>10-12点（常にある）</td><td class="highlight">24.3%</td></tr>
+              <tr><td>7-9点（時々ある）</td><td>41.2%</td></tr>
+              <tr><td>4-6点（ほとんどない）</td><td>52.2%</td></tr>
+              <tr><td>3点（決してない）</td><td class="low">58.2%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="insight-box red">
+        <p>UCLA孤独感が最高（10-12点）の層では社会参加率が<strong>24.3%</strong>と全体平均（46.6%）の約半分に低下。孤独感と社会参加の間には明確な逆相関が確認される。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     Section 5: 行政支援
+     ===================================================== -->
+<section class="report-section" id="support">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2 class="section-title">行政・NPO等からの支援状況</h2>
+    </div>
+
+    <div class="fig-card">
+      <img src="../images/fig11.png" alt="行政支援受給状況" class="fig-img">
+      <div class="fig-caption">
+        <strong>図11:</strong> 行政支援受給状況（都市規模別） ｜ 📊 出典: 第4-1表
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-mini">
+        <div class="stat-mini-num" style="color:#e53935;">7.4%</div>
+        <div class="stat-mini-label">支援受給率（全体）</div>
+      </div>
+      <div class="stat-mini">
+        <div class="stat-mini-num">92.6%</div>
+        <div class="stat-mini-label">公的支援を受けていない</div>
+      </div>
+      <div class="stat-mini">
+        <div class="stat-mini-num" style="color:#26a69a;">10.7%</div>
+        <div class="stat-mini-label">町村（最高値）</div>
+      </div>
+      <div class="stat-mini">
+        <div class="stat-mini-num" style="color:#e53935;">6.3%</div>
+        <div class="stat-mini-label">20万人以上の都市<br>（最低値）</div>
+      </div>
+    </div>
+
+    <div class="insight-box red">
+      <p>行政機関・NPO等からの支援を「受けている」のはわずか<strong>7.4%</strong>。約9割以上が公的支援を受けていない。都市部での支援アクセスのミスマッチが深刻な課題となっている。2021年の緊急対策として政府は約60億円の孤独・孤立対策NPO支援を実施したが、支援の届かない層が依然として多い。<sup><a href="#ref-budget">注4</a></sup></p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     Section 6: 生活満足度
+     ===================================================== -->
+<section class="report-section" id="satisfaction">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2 class="section-title">生活満足度と孤独感の関係</h2>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="fig-card">
+          <img src="../images/fig12.png" alt="生活満足度×孤独感" class="fig-img">
+          <div class="fig-caption">
+            <strong>図12:</strong> 生活満足度×孤独感分布 ｜ 📊 出典: 第1-26表
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="chart-container">
+          <div class="chart-title">生活満足度別 UCLA高スコア率（インタラクティブ）</div>
+          <div class="chart-wrap" style="height:230px;">
+            <canvas id="satisfChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>生活満足度</th>
+          <th>UCLA高スコア（10-12点）</th>
+          <th>全体（6.5%）比</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>満足している</td><td class="low">1.0%</td><td>×0.15</td></tr>
+        <tr><td>まあ満足している</td><td>2.3%</td><td>×0.35</td></tr>
+        <tr><td>どちらともいえない</td><td>8.2%</td><td>×1.26</td></tr>
+        <tr><td>やや不満である</td><td>13.8%</td><td>×2.12</td></tr>
+        <tr><td>不満である</td><td class="highlight">31.5%</td><td>×4.85</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight-box red">
+      <p>「不満である」群のUCLA高スコア<strong>31.5%</strong>は「満足している」群（1.0%）の約31倍。生活満足度と孤独感は双方向の強い関連を持ち、互いに影響し合う構造が示唆される。</p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     Section 7: 総合考察
+     ===================================================== -->
+<section class="report-section" id="analysis">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2 class="section-title">総合考察</h2>
+    </div>
+
+    <!-- 7.1 Factor ranking -->
+    <div class="sub-section">
+      <h3 class="sub-title">7.1 孤独感に関連する主要因子（影響度順）</h3>
+      <ul class="factor-list">
+        <li class="factor-item">
+          <div class="factor-rank">1</div>
+          <div class="factor-bar-wrap">
+            <div class="factor-label">生活満足度</div>
+            <div class="factor-desc">「不満」群と「満足」群の差：+30.5pt（最大の格差）</div>
+            <div class="factor-bar-bg">
+              <div class="factor-bar" data-width="100" style="width:0;background:#e53935;"></div>
+            </div>
+          </div>
+        </li>
+        <li class="factor-item">
+          <div class="factor-rank">2</div>
+          <div class="factor-bar-wrap">
+            <div class="factor-label">就業状況</div>
+            <div class="factor-desc">求職中と全体平均の差：+12.1pt（就業安定の重要性）</div>
+            <div class="factor-bar-bg">
+              <div class="factor-bar" data-width="40" style="width:0;background:#ffa726;"></div>
+            </div>
+          </div>
+        </li>
+        <li class="factor-item">
+          <div class="factor-rank">3</div>
+          <div class="factor-bar-wrap">
+            <div class="factor-label">社会参加有無</div>
+            <div class="factor-desc">非参加群と参加群の差：+6.1pt</div>
+            <div class="factor-bar-bg">
+              <div class="factor-bar" data-width="20" style="width:0;background:#1e88e5;"></div>
+            </div>
+          </div>
+        </li>
+        <li class="factor-item">
+          <div class="factor-rank">4</div>
+          <div class="factor-bar-wrap">
+            <div class="factor-label">世帯構成</div>
+            <div class="factor-desc">ひとり世帯と全体の差：+3.4pt</div>
+            <div class="factor-bar-bg">
+              <div class="factor-bar" data-width="11" style="width:0;background:#1e88e5;"></div>
+            </div>
+          </div>
+        </li>
+        <li class="factor-item">
+          <div class="factor-rank">5</div>
+          <div class="factor-bar-wrap">
+            <div class="factor-label">年齢（30代最高）</div>
+            <div class="factor-desc">30代が最高（9.5%）、70代が最低（3.9%）。範囲5.6pt</div>
+            <div class="factor-bar-bg">
+              <div class="factor-bar" data-width="18" style="width:0;background:#42a5f5;"></div>
+            </div>
+          </div>
+        </li>
+        <li class="factor-item">
+          <div class="factor-rank">6</div>
+          <div class="factor-bar-wrap">
+            <div class="factor-label">都市規模</div>
+            <div class="factor-desc">差は±1.6ptで影響は小さい</div>
+            <div class="factor-bar-bg">
+              <div class="factor-bar" data-width="5" style="width:0;background:#90caf9;"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 7.2 Negative cycle -->
+    <div class="sub-section">
+      <h3 class="sub-title">7.2 孤独・孤立の負のサイクル</h3>
+      <div class="cycle-box">
+        <div class="cycle-flow">
+          <div class="cycle-step">低社会参加 ／ 経済的不安定</div>
+          <div class="cycle-arrow-down">↓</div>
+          <div class="cycle-step">孤独感の増加</div>
+          <div class="cycle-arrow-down">↓</div>
+          <div class="cycle-step">生活満足度の低下</div>
+          <div class="cycle-arrow-down">↓</div>
+          <div class="cycle-step danger">社会参加の障壁がさらに増加</div>
+          <div class="cycle-return">↺ このサイクルが繰り返される</div>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--text-sub);text-align:center;margin-top:4px;">
+        特に求職中の若年層・単身世帯では、経済的不安定・社会的つながりの希薄さが複合的に作用している可能性が高い。
+      </p>
+    </div>
+
+    <!-- 7.3 Policy -->
+    <div class="sub-section">
+      <h3 class="sub-title">7.3 政策的示唆</h3>
+      <div class="policy-grid">
+        <div class="policy-card red">
+          <div class="policy-target">若年層（20-30代）</div>
+          <div class="policy-issue">課題: 孤独感が全年齢最高（9.1〜9.5%）</div>
+          <div class="policy-action">キャリア支援との連動・ソーシャルスペースの提供</div>
+        </div>
+        <div class="policy-card orange">
+          <div class="policy-target">求職中の人</div>
+          <div class="policy-issue">課題: 孤独感が突出（18.6%）</div>
+          <div class="policy-action">ハローワーク等でのメンタルサポート強化</div>
+        </div>
+        <div class="policy-card">
+          <div class="policy-target">単身世帯</div>
+          <div class="policy-issue">課題: UCLA高スコア9.9%と高水準</div>
+          <div class="policy-action">地域コミュニティとの接続支援</div>
+        </div>
+        <div class="policy-card green">
+          <div class="policy-target">高齢単身者</div>
+          <div class="policy-issue">課題: 直接交流「全くない」16.5%</div>
+          <div class="policy-action">訪問支援・デジタル活用支援の充実</div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:24px;">
+        <div class="callout-icon">📌</div>
+        <div class="callout-text">
+          <h4>支援非受給者対策（最重要課題）</h4>
+          <p>92.6%が支援を受けていない現状を改善するために、支援情報の周知・ワンストップ相談窓口の充実が急務。2024年4月施行の「孤独・孤立対策推進法」に基づく143施策が着実に実施される必要がある。国際比較では日本の孤独感の頻度は英米（22〜23%）より低い（9%）が、慢性的孤独の割合が高い（35%超が10年以上）という特徴がある。<sup><a href="#ref-kff">注5</a></sup></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7.4 Data limitations -->
+    <div class="sub-section">
+      <h3 class="sub-title">7.4 データの限界</h3>
+      <ul style="font-size:14px;color:var(--text-sub);padding-left:24px;line-height:2.2;">
+        <li>クロス集計データのみのため、因果関係の確認はできない</li>
+        <li>調査時点のスナップショットであり、年度比較には別ファイルのデータが必要</li>
+        <li>「無回答」層の特性が不明であり、選択バイアスの可能性がある</li>
+        <li>オンライン調査の限界（デジタルデバイドを抱える高齢者の過少代表の可能性）</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =====================================================
+     References
+     ===================================================== -->
+<section class="ref-section" id="references">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num" style="background:rgba(255,255,255,0.22);">参</div>
+      <h2 class="section-title">参考資料</h2>
+    </div>
+
+    <div class="ref-grid">
+      <div class="ref-card">
+        <h3>📊 データ出典</h3>
+        <ul>
+          <li>内閣官房 孤独孤立対策担当室「孤独・孤立対策に関する実態調査 令和6年度（2024年度）」</li>
+          <li>分析ファイル: data03/01.孤独感に関する集計表(r6)20250423.xlsx 他</li>
+          <li>有効回答数: 孤独感 n=10,871 / 各種支援 n=8,084</li>
+        </ul>
+      </div>
+      <div class="ref-card">
+        <h3>🌐 関連政策・法令</h3>
+        <ul>
+          <li id="ref-law">注1: <a href="https://www.cas.go.jp/jp/seisaku/suisinhou/suisinhou.html" target="_blank">孤独・孤立対策推進法（2023年制定・2024年4月施行）</a></li>
+          <li><a href="https://www.cao.go.jp/kodoku_koritsu/torikumi/jutenkeikaku.html" target="_blank">孤独・孤立対策重点計画（内閣府）</a></li>
+          <li><a href="https://www.cao.go.jp/kodoku_koritsu/torikumi/zenkokuchousa/r6.html" target="_blank">令和6年度 全国調査ページ（内閣府）</a></li>
+        </ul>
+      </div>
+      <div class="ref-card">
+        <h3>🔬 学術・測定ツール</h3>
+        <ul>
+          <li id="ref-ucla">注2: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6856687/" target="_blank">UCLA孤独感尺度3項目版 日本語版検証（PMC）</a></li>
+          <li><a href="https://sparqtools.org/mobility-measure/ucla-loneliness-scale-version-3/" target="_blank">UCLA Loneliness Scale Version 3（英語）</a></li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/39192476/" target="_blank">UCLA日本人成人対象 検証研究（PubMed）</a></li>
+        </ul>
+      </div>
+      <div class="ref-card">
+        <h3>📈 関連調査・統計</h3>
+        <ul>
+          <li id="ref-nri">注3: <a href="https://www.nri.com/content/900033250.pdf" target="_blank">野村総合研究所「若者の孤独」調査（2023）</a></li>
+          <li id="ref-budget">注4: <a href="https://www.cao.go.jp/kodoku_koritsu/torikumi/yosan.html" target="_blank">孤独・孤立対策関係予算（内閣府）</a></li>
+          <li id="ref-kff">注5: <a href="https://www.kff.org/mental-health/loneliness-and-social-isolation-in-the-united-states-the-united-kingdom-and-japan-an-international-survey/" target="_blank">KFF国際比較調査（米・英・日）</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     Footer
+     ===================================================== -->
+<footer>
+  <p><strong>孤独・孤立対策に関する実態調査 分析レポート｜令和6年度（2024年度）</strong></p>
+  <p>データ出典: 内閣官房 孤独孤立対策担当室 ／ 分析日: 2026年3月13日</p>
+  <div class="footer-credit">Edited by Sur Communication Inc.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
