@@ -374,6 +374,46 @@ function initFadeIn() {
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 }
 
+// ===== グラフ拡大モーダル =====
+function initChartModal() {
+  const modal    = document.getElementById('chartModal');
+  const modalImg = document.getElementById('chartModalImg');
+  const backdrop = modal.querySelector('.chart-modal-backdrop');
+  const closeBtn = modal.querySelector('.chart-modal-close');
+
+  function openModal(src) {
+    modalImg.src = src;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    // srcをリセットして前の画像が一瞬見えないようにする
+    setTimeout(() => { modalImg.src = ''; }, 200);
+  }
+
+  backdrop.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // 静的画像（<img>）クリック
+  document.querySelectorAll('.chart-img-wrap img').forEach(img => {
+    img.addEventListener('click', () => openModal(img.src));
+  });
+
+  // Chart.js canvas クリック（描画済みのタイミングで登録するため少し遅らせる）
+  setTimeout(() => {
+    document.querySelectorAll('.chartjs-canvas-wrap canvas').forEach(canvas => {
+      canvas.addEventListener('click', () => {
+        const dataUrl = canvas.toDataURL('image/png');
+        openModal(dataUrl);
+      });
+    });
+  }, 500);
+}
+
 // ===== 初期化 =====
 document.addEventListener('DOMContentLoaded', () => {
   initAnnualTrend();
@@ -383,4 +423,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initResponseShare();
   initNavHighlight();
   initFadeIn();
+  initChartModal();
 });
