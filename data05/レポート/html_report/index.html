@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>労働力調査 長期時系列分析レポート</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     Navigation
+══════════════════════════════════════════ -->
+<nav class="site-nav" aria-label="セクションナビゲーション">
+  <div class="nav-inner">
+    <a href="#sec1">主要指標推移</a>
+    <a href="#sec2">失業率構造</a>
+    <a href="#sec3">正規・非正規</a>
+    <a href="#sec4">産業構造</a>
+    <a href="#sec5">年齢・男女</a>
+    <a href="#sec6">農業転換</a>
+    <a href="#sec7">地域格差</a>
+    <a href="#sec8">総合考察</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     Header
+══════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-badge">STATISTICS BUREAU OF JAPAN</div>
+  <h1>労働力調査 長期時系列分析レポート</h1>
+  <p class="header-subtitle">
+    総務省統計局「労働力調査 長期時系列データ」&nbsp;|&nbsp;データ期間：1953〜2026年
+  </p>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">就業者数</div>
+      <div class="kpi-value">6,776</div>
+      <div class="kpi-unit">万人（2026年1月）</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">完全失業率（季調）</div>
+      <div class="kpi-value">2.7<span style="font-size:18px">%</span></div>
+      <div class="kpi-unit">男 2.9% ／ 女 2.5%</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">非正規比率</div>
+      <div class="kpi-value">36.9<span style="font-size:18px">%</span></div>
+      <div class="kpi-unit">非正規 2,155万人</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">調査開始</div>
+      <div class="kpi-value">1953</div>
+      <div class="kpi-unit">年〜（70年超の時系列）</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     Section 1: 主要指標の長期推移
+══════════════════════════════════════════ -->
+<section class="report-section" id="sec1">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="section-num">1</span>
+      <h2>主要指標の長期推移</h2>
+    </div>
+
+    <div class="insight-box fade-up">
+      就業者数は高度経済成長期から一貫して増加し、2019年に<strong>6,750万人</strong>のピークを記録。
+      その後、新型コロナウイルスの影響で一時減少したものの、2023年以降は回復基調が続いている。
+      完全失業率は1990年代末〜2000年代初頭にかけて過去最高水準（2002年：5.4%）まで上昇した後、
+      構造改革と景気回復を経て現在は<strong>2%台前半</strong>の低水準で推移している。
+    </div>
+
+    <div class="grid-2 fade-up">
+      <div class="chart-img-wrap">
+        <img src="../../images/fig01.png" alt="就業者数・失業率の長期推移">
+        <p class="chart-caption">図1: 就業者数・完全失業率の長期推移（1953〜2026年）</p>
+      </div>
+      <div class="chart-img-wrap">
+        <img src="../../images/fig02.png" alt="労働力人口・非労働力人口の推移">
+        <p class="chart-caption">図2: 労働力人口・非労働力人口の推移（1953〜2026年）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     Section 2: 完全失業率の構造変化
+══════════════════════════════════════════ -->
+<section class="report-section" id="sec2">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="section-num">2</span>
+      <h2>完全失業率の構造変化</h2>
+    </div>
+
+    <div class="insight-box fade-up">
+      バブル崩壊後から続いた失業率上昇は2002年に頂点を迎えた（男性：6.0%）。
+      その後、アベノミクス以降の雇用拡大により2018年には<strong>男性2.6%・女性2.1%</strong>まで改善。
+      コロナ禍で一時悪化したものの2022年以降は再び低下傾向にある。
+      男女差は縮小傾向にあるが、依然として男性が女性を<strong>約0.4〜0.6pt</strong>上回る構造は変わらない。
+    </div>
+
+    <div class="grid-2 fade-up">
+      <div class="chartjs-canvas-wrap">
+        <div class="chart-title">完全失業率の推移（1990〜2025年）男女別</div>
+        <canvas id="chartUnemployment" height="260"></canvas>
+      </div>
+      <div class="chart-img-wrap">
+        <img src="../../images/fig08.png" alt="地域別完全失業率の推移">
+        <p class="chart-caption">図8: 地域別完全失業率の推移</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     Section 3: 正規・非正規雇用の変化
+══════════════════════════════════════════ -->
+<section class="report-section" id="sec3">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="section-num">3</span>
+      <h2>正規・非正規雇用の変化</h2>
+    </div>
+
+    <div class="insight-box fade-up">
+      非正規雇用比率は2013年の<strong>36.8%</strong>から2019年の<strong>38.3%</strong>まで上昇。
+      コロナ禍の2020年に非正規が一時急減（−75万人）したが、これはサービス業を中心とした雇用喪失を反映している。
+      2026年1月時点では正規3,687万人・非正規2,155万人で、非正規比率は<strong>36.9%</strong>と
+      依然として高水準で推移している。
+    </div>
+
+    <div class="grid-2 fade-up">
+      <div class="chartjs-canvas-wrap">
+        <div class="chart-title">正規・非正規雇用者数の推移（2013〜2025年）</div>
+        <canvas id="chartEmployment" height="280"></canvas>
+      </div>
+      <div class="chart-img-wrap">
+        <img src="../../images/fig04.png" alt="正規・非正規比率の変化">
+        <p class="chart-caption">図4: 正規・非正規雇用の詳細推移と比率変化</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     Section 4: 産業・就業形態構造
+══════════════════════════════════════════ -->
+<section class="report-section" id="sec4">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="section-num">4</span>
+      <h2>産業・就業形態構造</h2>
+    </div>
+
+    <div class="insight-box fade-up">
+      2025年の産業別就業者数は、製造業<strong>1,033万人</strong>・医療福祉<strong>947万人</strong>・
+      卸売小売<strong>1,029万人</strong>が上位を占める。医療福祉は高齢化に伴い2000年代以降急拡大しており、
+      今後も最大の雇用吸収産業となる見込みである。
+      一方、製造業は1990年代をピークに長期的な縮小傾向にある。
+    </div>
+
+    <div class="grid-3 fade-up">
+      <div class="chart-img-wrap">
+        <img src="../../images/fig07.png" alt="産業別就業者数の長期推移">
+        <p class="chart-caption">図7: 産業別就業者数の長期推移</p>
+      </div>
+      <div class="chart-img-wrap">
+        <img src="../../images/fig12.png" alt="産業シェア比較">
+        <p class="chart-caption">図12: 産業別シェア比較（2000年 vs 2025年）</p>
+      </div>
+      <div class="chart-img-wrap">
+        <img src="../../images/fig06.png" alt="就業形態別推移">
+        <p class="chart-caption">図6: 就業形態別（雇用者・自営業・家族従業者）の推移</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     Section 5: 年齢別・男女別就業構造
+══════════════════════════════════════════ -->
+<section class="report-section" id="sec5">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="section-num">5</span>
+      <h2>年齢別・男女別就業構造</h2>
+    </div>
+
+    <div class="insight-box fade-up">
+      女性の就業率は近年大きく上昇し、25〜54歳のコア世代では<strong>80%超</strong>を達成。
+      M字カーブは依然として存在するものの、その底（30〜34歳）は2010年代以降に顕著に改善している。
+      高齢者（65歳以上）の就業率も上昇し続けており、<strong>25.2%</strong>（2024年）と
+      OECD主要国の中でも高水準にある。
+    </div>
+
+    <div class="grid-2 fade-up">
+      <div class="chart-img-wrap">
+        <img src="../../images/fig05.png" alt="年齢別就業率の変化">
+        <p class="chart-caption">図5: 年齢階級別就業率の推移（男女別）</p>
+      </div>
+      <div class="chart-img-wrap">
+        <img src="../../images/fig09.png" alt="男女別労働力参加率">
+        <p class="chart-caption">図9: 男女別労働力参加率の長期推移</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     Section 6: 農業・林業と産業転換
+══════════════════════════════════════════ -->
+<section class="report-section" id="sec6">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="section-num">6</span>
+      <h2>農業・林業と産業転換</h2>
+    </div>
+
+    <div class="insight-box fade-up">
+      農業・林業就業者数は1953年の<strong>約1,600万人</strong>（全就業者の約36%）から
+      2025年の<strong>約190万人</strong>（同3%未満）へと劇的に減少した。
+      この約70年間の産業構造の転換は、日本の高度経済成長を労働力供給面から支えた一方、
+      農村人口の都市集中、食料自給率の低下という課題ももたらした。
+    </div>
+
+    <div class="fade-up">
+      <div class="chart-img-wrap" style="max-width: 720px; margin: 0 auto;">
+        <img src="../../images/fig10.png" alt="農業・林業就業者数の長期推移">
+        <p class="chart-caption">図10: 農業・林業就業者数の長期推移と産業構造転換（1953〜2025年）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     Section 7: 地域格差
+══════════════════════════════════════════ -->
+<section class="report-section" id="sec7">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="section-num">7</span>
+      <h2>地域格差</h2>
+    </div>
+
+    <div class="insight-box fade-up">
+      2024年第4四半期の地域別完全失業率を見ると、<strong>北海道（2.9%）・近畿（2.9%）</strong>が高く、
+      <strong>北陸（1.9%）・北関東甲信（2.0%）</strong>が低い。製造業集積地域で雇用安定が続く一方、
+      サービス業依存度の高い大都市圏では依然として構造的な失業が残存している。
+    </div>
+
+    <div class="grid-2 fade-up">
+      <div class="chartjs-canvas-wrap">
+        <div class="chart-title">地域別完全失業率（2024年第4四半期）</div>
+        <canvas id="chartRegional" height="280"></canvas>
+      </div>
+      <div class="chart-img-wrap">
+        <img src="../../images/fig11.png" alt="地域別就業構造ヒートマップ">
+        <p class="chart-caption">図11: 地域別就業構造ヒートマップ</p>
+      </div>
+    </div>
+
+    <div class="fade-up" style="margin-top: 24px;">
+      <div class="chart-img-wrap">
+        <img src="../../images/fig03.png" alt="地域別就業者数の推移">
+        <p class="chart-caption">図3: 地域別・産業別就業者数の比較</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     Section 8: 総合考察
+══════════════════════════════════════════ -->
+<section class="report-section" id="sec8">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="section-num">8</span>
+      <h2>総合考察</h2>
+    </div>
+
+    <div class="findings-grid fade-up">
+      <div class="finding-card">
+        <div class="finding-icon">📈</div>
+        <h3>就業者数は底堅い回復基調</h3>
+        <p>
+          コロナ禍の落ち込みから回復し、2026年1月時点で6,776万人を維持。
+          高齢者・女性の就業拡大が全体を下支えしており、
+          人口減少局面においても就業者数の急減には至っていない。
+        </p>
+      </div>
+      <div class="finding-card">
+        <div class="finding-icon">⚠️</div>
+        <h3>非正規比率は構造的課題</h3>
+        <p>
+          非正規雇用比率36.9%は1990年代以降の長期上昇傾向を反映している。
+          特にサービス業・小売業・飲食業で非正規集中が続いており、
+          賃金格差と社会保障負担の偏在という問題が依然として残存する。
+        </p>
+      </div>
+      <div class="finding-card">
+        <div class="finding-icon">🏭</div>
+        <h3>産業構造の変革が加速</h3>
+        <p>
+          製造業が縮小する一方、医療・福祉・情報通信が急拡大。
+          高齢化の進展により医療福祉は今後も最大の雇用吸収産業となる見通しで、
+          労働市場の構造変化は今後もさらに加速する見込みである。
+        </p>
+      </div>
+      <div class="finding-card">
+        <div class="finding-icon">👩‍💼</div>
+        <h3>女性活躍は進展も、質の改善が課題</h3>
+        <p>
+          女性の就業率・労働力参加率は過去最高水準を更新中だが、
+          管理職比率や賃金水準では依然として男性との格差が大きい。
+          M字カーブの改善も、非正規・パートタイムへのシフトが一因であることに留意が必要。
+        </p>
+      </div>
+      <div class="finding-card">
+        <div class="finding-icon">👴</div>
+        <h3>高齢者就業が労働力不足を補完</h3>
+        <p>
+          65歳以上の就業率は2024年に25.2%まで上昇。定年延長・再雇用制度の普及が就業継続を後押ししている。
+          ただし、高齢就業者の多くは非正規・短時間労働であり、
+          量的拡大と質的向上の両立が今後の政策課題となる。
+        </p>
+      </div>
+      <div class="finding-card">
+        <div class="finding-icon">🗾</div>
+        <h3>地域格差の固定化に注意</h3>
+        <p>
+          北海道・近畿の失業率は全国平均を上回り、製造業集積地との格差が持続している。
+          地方の産業空洞化・人口流出に歯止めをかけるため、
+          地域産業振興と移住促進の政策的整合が求められる。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     Footer
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-section">
+      <h4>データ出典</h4>
+      <p>総務省統計局「労働力調査 長期時系列データ」<br>
+        <a href="https://www.stat.go.jp/data/roudou/longtime/03roudou.html" target="_blank" rel="noopener">
+          www.stat.go.jp
+        </a>
+      </p>
+    </div>
+    <div class="footer-section">
+      <h4>レポート情報</h4>
+      <p>作成日：2026年3月<br>
+         データ期間：1953年〜2026年1月<br>
+         有効回答数：長期時系列（月次・年次）
+      </p>
+    </div>
+    <div class="footer-section">
+      <h4>注記</h4>
+      <p>グラフはクリックで拡大表示できます。<br>
+         数値は統計局公表値を基にした分析値です。<br>
+         季節調整値は総務省公表の調整済み数値を使用。
+      </p>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <p class="footer-credit">Edited by Sur Communication Inc.</p>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     Chart Modal
+══════════════════════════════════════════ -->
+<div id="chartModal" class="chart-modal" role="dialog" aria-modal="true" aria-label="グラフ拡大表示">
+  <div class="chart-modal-backdrop"></div>
+  <div class="chart-modal-content">
+    <button class="chart-modal-close" aria-label="閉じる">&times;</button>
+    <img id="chartModalImg" src="" alt="拡大グラフ">
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
